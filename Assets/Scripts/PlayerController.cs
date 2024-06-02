@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour, IMove
     private void Update()
     {
         float _horizontal = Input.GetAxis("Horizontal");
-        Speed = Mathf.Abs(_horizontal);
+        Speed = _horizontal;
 
         Vector3 _movement = new Vector3(_horizontal, 0);
 
