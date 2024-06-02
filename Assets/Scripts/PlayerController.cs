@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent (typeof(CharacterGrounding))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
@@ -9,9 +11,12 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D _rb2D;
 
+    private CharacterGrounding _characterGrounding;
+
     private void Awake()
     {
         _rb2D = GetComponent<Rigidbody2D>();
+        _characterGrounding = GetComponent<CharacterGrounding>();
     }
 
     void Update()
@@ -22,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
         transform.position += _movement * Time.deltaTime * _moveSpeed;
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) && _characterGrounding.IsGroudned)
         {
             _rb2D.AddForce(Vector2.up * _jumpForce);
         }

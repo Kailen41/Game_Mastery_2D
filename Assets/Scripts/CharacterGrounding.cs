@@ -15,14 +15,13 @@ public class CharacterGrounding : MonoBehaviour
     [SerializeField]
     private LayerMask _groundMask;
 
-    [SerializeField]
-    private bool _isGrounded;
+    public bool IsGroudned { get; private set; }
 
     private void Update()
     {
         CheckFootForGrounding(_leftFoot);
 
-        if (_isGrounded == false)
+        if (IsGroudned == false)
         {
             CheckFootForGrounding(_rightFoot);
         }
@@ -35,11 +34,11 @@ public class CharacterGrounding : MonoBehaviour
 
         if (_raycastHit.collider != null)
         {
-            _isGrounded = true;
+            IsGroudned = true;
         }
         else
         {
-            _isGrounded= false;
+            IsGroudned = false;
         }
     }
 }
