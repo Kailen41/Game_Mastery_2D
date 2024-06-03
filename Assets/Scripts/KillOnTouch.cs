@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class KillOnTouch : MonoBehaviour
 {
@@ -9,7 +8,7 @@ public class KillOnTouch : MonoBehaviour
 
         if (_playerController != null)
         {
-            SceneManager.LoadScene(0);
+            GameManager.Instance.KillPlayer();
         }
     }
 }
