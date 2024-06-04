@@ -23,16 +23,19 @@ public class PlayerController : MonoBehaviour, IMove
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.W) && _characterGrounding.IsGroudned)
+        {
+            _rb2D.AddForce(Vector2.up * _jumpForce);
+        }
+    }
+
+    private void FixedUpdate()
+    {
         float _horizontal = Input.GetAxis("Horizontal");
         Speed = _horizontal;
 
         Vector3 _movement = new Vector3(_horizontal, 0);
 
         transform.position += _movement * Time.deltaTime * _moveSpeed;
-
-        if (Input.GetKeyDown(KeyCode.W) && _characterGrounding.IsGroudned)
-        {
-            _rb2D.AddForce(Vector2.up * _jumpForce);
-        }
     }
 }

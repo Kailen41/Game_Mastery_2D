@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 265256399}
   - component: {fileID: 265256398}
   - component: {fileID: 265256397}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 456427786}
   - component: {fileID: 456427785}
   - component: {fileID: 456427784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2315,7 +2315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2122160782}
   - component: {fileID: 2122160781}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: '[CheckpointManager]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
